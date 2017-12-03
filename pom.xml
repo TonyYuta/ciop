@@ -3,11 +3,11 @@
     <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.connectedio</groupId>
-  <artifactId>cioprod</artifactId>
+  <artifactId>ciop</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
 
-    <name>cioprod</name>
+    <name>ciop</name>
     <url>http://maven.apache.org</url>
 
     <properties>
@@ -18,12 +18,13 @@
 
     <dependencies>
 
-        <!-- https://mvnrepository.com/artifact/org.testng/testng -->
-        <dependency>
-            <groupId>org.testng</groupId>
-            <artifactId>testng</artifactId>
-            <version>6.11</version>
-        </dependency>
+	<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+	<dependency>
+	    <groupId>org.testng</groupId>
+	    <artifactId>testng</artifactId>
+	    <version>6.13.1</version>
+	    <scope>test</scope>
+	</dependency>
 
         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
         <dependency>
