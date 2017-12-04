@@ -7,8 +7,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.phantomjs.PhantomJSDriver;
-import org.openqa.selenium.phantomjs.PhantomJSDriverService;
+//import org.openqa.selenium.phantomjs.PhantomJSDriver;
+//import org.openqa.selenium.phantomjs.PhantomJSDriverService;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 /** @author Yutaka */
@@ -27,6 +27,7 @@ public class DriverFactory {
 	static final int SCRIPT_LOAD_WAIT = 7;
 	//getDriver will return the driverType user input 
 	// it is synchronized for multi Threading safety
+	@SuppressWarnings("deprecation")
 	public static synchronized WebDriver getDriver(String driverType) {
 	// beautifying the input
 	driverType = driverType.trim().toLowerCase();
@@ -59,7 +60,7 @@ public class DriverFactory {
 
 		   // driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 			break;
-			
+/*		
 		case "phantom":
 			//PhanthomJS driver 
 			//System.setProperty("phantomjs.binary.path", System.getProperty("user.dir")+"/Library/phantomjs");
@@ -73,7 +74,9 @@ public class DriverFactory {
 			driver = new PhantomJSDriver(phantomCaps);
 			driver.manage().window().setSize(new Dimension(1920, 1080));
 	        break;
-				
+*/
+			
+			
 		default:
 			String msg = "Unknown driver type";
 			throw new IllegalArgumentException(msg);
